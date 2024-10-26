@@ -1,0 +1,20 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+    int t;
+    cin >> t;
+    while(t--){
+        int n, k;
+        cin >> n >> k;
+        string p;
+        for (int i = 0; i < k; i++) p += '1';
+        for (int i = k; i < n; i++) p += '0';
+        sort(p.rbegin(), p.rend());
+        cout << "The bit patterns are" << '\n';
+        do {
+            cout << p << '\n';
+        } while (prev_permutation(p.begin(), p.end()));
+        if (t != 0) cout << '\n';
+    }
+    return 0;
+}

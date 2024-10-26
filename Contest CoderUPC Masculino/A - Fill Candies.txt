@@ -1,0 +1,15 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+    int t, n, m, k;
+    cin >> t;
+    while (t--) {
+        cin >> n >> k >> m;
+        int ans = 0;
+        while (n > (k * m * ans)) {
+            ans++;
+        }
+        cout << ans << '\n';
+    }
+    return 0;
+}

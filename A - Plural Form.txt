@@ -1,0 +1,13 @@
+#include <bits/stdc++.h>
+#define ll long long int
+using namespace std;
+int main(){
+    string s;
+    cin >> s;
+    int p;
+    p = s.size();
+    if (s[p - 1] == 's') s += "es";
+    else s += 's';
+    cout << s;
+    return 0;
+}

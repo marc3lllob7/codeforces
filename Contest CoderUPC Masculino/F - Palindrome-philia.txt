@@ -1,0 +1,15 @@
+#include "bits/stdc++.h"
+using namespace std;
+int main(){
+	string s;
+	int ans = 0, tmn;
+	cin >> s;
+	tmn = s.size();
+	int i = 0;
+	while (i < (tmn / 2)){
+		if (s[i] != s[tmn - 1 - i])
+		ans++;i++;
+	}
+	cout << ans;
+	return 0;
+}

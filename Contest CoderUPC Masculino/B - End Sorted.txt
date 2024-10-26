@@ -1,0 +1,17 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int t;
+    cin >> t;
+	while (t--){
+	    int n, v, pI, pF;
+	    cin >> n;
+    	for (int i = 0; i < n; i++){
+	        cin >> v;
+	        if (v == 1) pI = i;
+	        if (v == n) pF = i;
+    	}
+	    cout << pI + n - pF - 1 - (pI > pF) << '\n';
+	} 
+}
