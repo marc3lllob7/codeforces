@@ -1,0 +1,20 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+	int t, k;
+	cin >> t;
+	while(t--){
+		cin >> k;
+		vector <int> a(k);
+		for (int i = 0; i < k; i++) cin >> a[i];
+		sort (a.begin(), a.end());
+		int lt = 0, rt = k - 1;
+		while (lt < rt){
+			int tt = a[lt] * a[rt];
+			if (tt < k - 2) lt++;
+			else if (tt > k - 2) rt--;
+			else break;
+		}
+		cout << a[lt] << " " << a[rt] << '\n';
+	}
+}
